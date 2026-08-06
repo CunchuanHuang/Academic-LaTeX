@@ -5,9 +5,9 @@
 ## 页面预览
 
 <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-    <img src="figure/READMEpage1.png" style="width: 33%; height: auto;">
-    <img src="figure/READMEpage2.png" style="width: 33%; height: auto;">
-    <img src="figure/READMEpage3.png" style="width: 33%; height: auto;">
+    <img src="figure/READMEpage1.png" style="width: 32%; height: auto;">
+    <img src="figure/READMEpage2.png" style="width: 32%; height: auto;">
+    <img src="figure/READMEpage3.png" style="width: 32%; height: auto;">
 </div>
 
 ## 所需文件
