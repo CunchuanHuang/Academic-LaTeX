@@ -1,6 +1,6 @@
 # Academic LaTeX
 
-[![CV](https://img.shields.io/badge/CV1-00008B?logo=cv)](CV/cv1) [![CV](https://img.shields.io/badge/CV2-00008B?logo=cv)](CV/cv2) [![Paper](https://img.shields.io/badge/Paper-00008B?logo=paper)](CV/)
+[![CV](https://img.shields.io/badge/CV1-00008B?logo=cv)](CV/cv1) [![CV](https://img.shields.io/badge/CV2-00008B?logo=cv)](CV/cv2) [![Paper](https://img.shields.io/badge/Paper-00008B?logo=paper)](Paper/)
 
 ## 🎓Intro
 
