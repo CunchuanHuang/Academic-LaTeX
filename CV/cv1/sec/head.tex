@@ -1,0 +1,121 @@
+%\headstylevitrue
+
+\ifheadstylei
+    \begin{center}
+    {\LARGE\textbf{\name}} \\
+    {\small{\location}} \\
+    {\small{%
+        \phone\ |
+        \href{mailto:\email}{\email} \\
+        \href{\homepage}{Homepage} |
+        \href{\googlescholar}{Google Scholar} |
+        \href{\semanticscholar}{Semantic Scholar} |
+        \href{\orcid}{ORCID} |
+        \href{\dblp}{DBLP} |
+        \href{\scopus}{Scopus} |
+        \href{\github}{GitHub}%
+    }}
+    \end{center}
+\fi
+\ifheadstyleii
+    \begin{center}
+    {\LARGE\textbf{\name}} \\
+    {\small{\location}} \\
+    {\small{%
+        \phone\ | %\commandicon{\faPhone}
+        \href{mailto:\email}{\email} \\ % \commandicon{\faEnvelope}
+        \commandicon{\faGlobe}~\href{\homepage}{Homepage} |
+        \mylocalicon{\includegraphics{figure/googlescholar}}~\href{\googlescholar}{Google Scholar} |
+        \mylocalicon{\includegraphics{figure/semanticscholar}}~\href{\semanticscholar}{Semantic Scholar} |
+        \mylocalicon{\includegraphics{figure/orcid}}~\href{\orcid}{ORCID} | % \commandicon{\faOrcid}
+        \mylocalicon{\includegraphics{figure/dblp}}~\href{\dblp}{DBLP} |
+        \mylocalicon{\includegraphics{figure/scopus}}~\href{\scopus}{Scopus} |
+        \commandicon{\faGithub}~\href{\github}{GitHub}%
+    }}
+    \end{center}
+\fi
+\ifheadstyleiii
+    \begin{center}
+    {\LARGE\textbf{\name}} \\
+    {\small{\location}} \\
+    {\small{%
+        \phone\ |
+        \href{mailto:\email}{\email} \\
+        \href{\homepage}{Homepage: \githubusername.github.io} |
+        \href{\googlescholar}{Google Scholar} |
+        \href{\semanticscholar}{Semantic Scholar} \\
+        \href{\orcid}{ORCID: \orcidid} |
+        \href{\dblp}{DBLP: \dblpid} |
+        \href{\scopus}{Scopus: \scopusid} |
+        \href{\github}{GitHub: \githubusername}%
+    }}
+    \end{center}
+\fi
+\ifheadstyleiv
+    \begin{center}
+    {\LARGE\textbf{\name}} \\
+    {\small{\location}} \\
+    {\small{%
+        \phone\ | %\commandicon{\faPhone}
+        \href{mailto:\email}{\email} \\ % \commandicon{\faEnvelope}
+        \commandicon{\faGlobe}~\href{\homepage}{Homepage: \githubusername.github.io} |
+        \mylocalicon{\includegraphics{figure/googlescholar}}~\href{\googlescholar}{Google Scholar} |
+        \mylocalicon{\includegraphics{figure/semanticscholar}}~\href{\semanticscholar}{Semantic Scholar} \\
+        \mylocalicon{\includegraphics{figure/orcid}}~\href{\orcid}{ORCID: \orcidid} | % \commandicon{\faOrcid}
+        \mylocalicon{\includegraphics{figure/dblp}}~\href{\dblp}{DBLP: \dblpid} |
+        \mylocalicon{\includegraphics{figure/scopus}}~\href{\scopus}{Scopus: \scopusid} |
+        \commandicon{\faGithub}~\href{\github}{GitHub: \githubusername}%
+    }}
+    \end{center}
+\fi
+\ifheadstylev
+    \ifjustify\noindent\fi%
+    {\LARGE\textbf{\name}} \hfill {\small\href{\homepage}{\githubusername.github.io}} \\
+    {\small\degree} \hfill {\small\href{\googlescholar}{Google Scholar} | \href{\semanticscholar}{Semantic Scholar}} \\
+    {\small\location} \hfill {\small\href{\orcid}{ORCID: \orcidid}} \\
+    {\small Email: \href{mailto:\email}{\email}} \hfill {\small\href{\dblp}{DBLP: \dblpid} | \href{\scopus}{Scopus: \scopusid}}%
+\fi
+\ifheadstylevi
+    \ifjustify\noindent\fi%
+    \parbox{1.5cm}{\includegraphics[width=1.35cm]{figure/logo.pdf}}
+    \parbox{\dimexpr\linewidth-1.6cm\relax}{
+    {\LARGE\textbf{\name}} \hfill {\small\href{\homepage}{\githubusername.github.io}} \\
+    {\small\degree} \hfill {\small\href{\googlescholar}{Google Scholar} | \href{\semanticscholar}{Semantic Scholar}} \\
+    {\small\location} \hfill {\small\href{\orcid}{ORCID: \orcidid}} \\
+    {\small Email: \href{mailto:\email}{\email}} \hfill {\small\href{\dblp}{DBLP: \dblpid} | \href{\scopus}{Scopus: \scopusid}}
+    }
+\fi
+
+
+%\begin{center}
+%    {\LARGE\textbf{\name}} \\
+%    {\small{\location}} \\
+%    {\small{%
+%        \phone\ | %\commandicon{\faPhone}
+%        \href{mailto:\email}{\email} \\ % \commandicon{\faEnvelope}
+%        \commandicon{\faGlobe}~\href{\homepage}{Homepage} |
+%        \mylocalicon{\includegraphics{figure/googlescholar}}~\href{\googlescholar}{Google Scholar} |
+%        \mylocalicon{\includegraphics{figure/semanticscholar}}~\href{\semanticscholar}{Semantic Scholar} |
+%        \mylocalicon{\includegraphics{figure/orcid}}~\href{\orcid}{ORCID} | % \commandicon{\faOrcid}
+%        \mylocalicon{\includegraphics{figure/dblp}}~\href{\dblp}{DBLP} |
+%        \mylocalicon{\includegraphics{figure/scopus}}~\href{\scopus}{Scopus} |
+%        \commandicon{\faGithub}~\href{\github}{GitHub}%
+%    }}
+%\end{center}
+
+%\ifjustify\noindent\fi%
+%{\LARGE\textbf{\name}} \hfill {\small\href{\homepage}{\githubusername.github.io}} \\
+%{\small\degree} \hfill {\small\href{\googlescholar}{Google Scholar} | \href{\semanticscholar}{Semantic Scholar}} \\
+%{\small\location} \hfill {\small\href{\orcid}{ORCID: \orcidid}} \\
+%{\small Email: \href{mailto:\email}{\email}} \hfill {\small\href{\dblp}{DBLP: \dblpid} | \href{\scopus}{Scopus: \scopusid}}%
+
+%\ifjustify\noindent\fi%
+%\parbox{1.5cm}{\includegraphics[width=1.35cm]{figure/logo.pdf}}
+%\parbox{\dimexpr\linewidth-1.6cm\relax}{
+%\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+%    {\LARGE\textbf{\name}} & {\small\href{\homepage}{\githubusername.github.io}} \\
+%    {\small\degree} & {\small\href{\googlescholar}{Google Scholar} | \href{\semanticscholar}{Semantic Scholar}} \\
+%    {\small\location} & {\small\href{\orcid}{ORCID: \orcidid}} \\
+%    {\small Email: \href{mailto:\email}{\email}} & {\small\href{\dblp}{DBLP: \dblpid} | \href{\scopus}{Scopus: \scopusid}}
+%\end{tabular*}
+%}%

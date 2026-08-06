@@ -1,0 +1,201 @@
+%
+% CV LaTeX Template
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: tsunchuan@qq.com
+%
+%
+\documentclass[a4paper,11pt]{article}
+%
+% IMPORT PACKAGE
+\usepackage[T1]{fontenc}
+\usepackage{cfr-lm}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+%
+% PAGE LAYOUT
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{} % clear footer fields
+\fancyhead{} % clear header fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=2cm, right=1.2cm, bottom=2cm}
+\setlength{\footskip}{1cm}
+\setlength{\headwidth}{\textwidth}
+\fancyfoot[R]{\footnotesize\thepage}
+%
+% COLOR DEFINITIONS
+\usepackage{xcolor}
+\definecolor{darkblue}{RGB}{0,0,139}
+% HYPERLINK SETUP (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=darkblue,filecolor=darkblue,urlcolor=darkblue}
+%
+% SECTION FORMATTING
+% SECTION OPTIONS
+\newif\ifrulestylei\rulestyleifalse
+\newif\ifrulestyleii\rulestyleiifalse
+\rulestyleitrue
+\usepackage{titlesec}
+\ifrulestylei%
+\titleformat{\section}{%
+  \bfseries\scshape\raggedright\Large%
+}{}{0pt}{}%
+[\color{black}\titlerule\vspace{-5pt}]%
+\fi
+\ifrulestyleii% 0.7ex: position the center of the horizontal line at 70% of the lowercase x height; thickness is 0.4pt*2=0.8pt
+\def\hrulefill{\leavevmode\leaders\hrule height \dimexpr0.4pt+0.7ex\relax depth \dimexpr0.4pt-0.7ex\relax \hfill\kern0pt}
+\titleformat{\section}[runin]{%
+\bfseries\scshape\Large%
+}{}{0pt}{}%
+[\hspace{12pt}\color{black}\hrulefill\newline\vspace{-\baselineskip}]%
+\fi
+%
+% COMMANDS for ICON SIZING and POSITIONING
+\newcommand{\commandicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\mylocalicon}[1]{\raisebox{-0.18em}{\resizebox{!}{1.15em}{#1}}}
+%
+% CUSTOM COMMANDS
+% redefine the itemize label
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+% setup table
+\newcommand{\leftcolwidth}{3cm} % width of the left column
+\setlength{\tabcolsep}{3mm}
+\setlength{\arrayrulewidth}{0mm}
+% table column alignment, support auto-wrapping (X)
+\usepackage{array,longtable}
+\newcolumntype{J}{p{\leftcolwidth}}% justify
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{\leftcolwidth}}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{\leftcolwidth}}%
+% time alignment
+\newif\iftimel\timelfalse % left-align
+\newif\iftimer\timerfalse % right-align
+\newif\iftimej\timejfalse % jusify
+\timeltrue
+% use tabularx/textline to display name and loc, make name and loc strictly two columns
+\usepackage{tabularx}
+\newcommand{\resumeSubHeading}[2]{%
+  \setlength{\tabcolsep}{0mm}%
+  \setlength{\arrayrulewidth}{0mm}%
+%  \begin{tabularx}{\linewidth}[t]{>{\raggedright\arraybackslash}X@{\hspace{2mm}}r}% left-aligned
+  \begin{tabularx}{\linewidth}[t]{X@{\hspace{2mm}}r}% X support auto-wrapping, X: default justify
+      \textbf{\small #1} & {\footnotesize \textbf{#2}}%
+  \end{tabularx}%
+}
+% use list to display additional information
+\usepackage{enumitem}
+\newenvironment{resumeItemList}{%
+  \begin{itemize}[leftmargin=0mm,itemindent=0mm,labelsep=2mm,itemsep=1mm,topsep=1mm]%
+}{\end{itemize}}
+% use two-column table to display an event (time,name,loc,info); set left and right with @{}: only keep the spacing between the two middle columns
+\newenvironment{resumeSubEvent}[4]{%
+  \iftimej%
+  \begin{longtable}{@{}Jp{\dimexpr\linewidth-\leftcolwidth-2\tabcolsep-3\arrayrulewidth\relax}@{}}%
+  \fi%
+  \iftimel%
+  \begin{longtable}{@{}Lp{\dimexpr\linewidth-\leftcolwidth-2\tabcolsep-3\arrayrulewidth\relax}@{}}%
+  \fi%
+  \iftimer%
+  \begin{longtable}{@{}Rp{\dimexpr\linewidth-\leftcolwidth-2\tabcolsep-3\arrayrulewidth\relax}@{}}%
+  \fi%
+    {\small #1} & \textbf{\small #2} \hfill {\footnotesize \textbf{#3}} \par% tmie name loc
+%    {\small #1} & {\resumeSubHeading{#2}{#3}} \par% make name and loc strictly two columns
+    {\small #4}% desc
+}{\end{longtable}}
+% use two-column table to display an event (time,name)
+\newenvironment{resumeSubContent}{%
+  \small
+  \renewcommand{\arraystretch}{1.5}
+  \vspace{-0.5ex}
+  \iftimej%
+  \begin{longtable}{@{}Jp{\dimexpr\linewidth-\leftcolwidth-2\tabcolsep-3\arrayrulewidth\relax}@{}}%
+  \fi%
+  \iftimel%
+  \begin{longtable}{@{}Lp{\dimexpr\linewidth-\leftcolwidth-2\tabcolsep-3\arrayrulewidth\relax}@{}}%
+  \fi%
+  \iftimer%
+  \begin{longtable}{@{}Rp{\dimexpr\linewidth-\leftcolwidth-2\tabcolsep-3\arrayrulewidth\relax}@{}}%
+  \fi%
+}{\end{longtable}}
+%
+% section style
+\newcommand{\cvsection}[1]{%
+  \begin{longtable}{@{}Jp{\dimexpr\linewidth-\leftcolwidth-2\tabcolsep-3\arrayrulewidth\relax}@{}}%
+    & \section{#1}%
+  \end{longtable}%
+}
+%
+% FONT OPTIONS
+\newcommand{\fontstylei}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\fontstyleii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\fontstyleiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\fontstyleiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\fontstylev}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\fontstylevi}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\fontstylevii}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\fontstyleviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\fontstyleix}{\fontfamily{cmr}\selectfont} % Computer Modern Roman
+\newcommand{\fontstylex}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\fontstylexi}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+%
+% DEFINE PERSONAL INFORMATION
+\newcommand{\name}{Full NAME} % Your Name
+\newcommand{\location}{Your City, Your State - Your ZIP, Your Country} % Your Location
+\newcommand{\degree}{Ph.D of Mathematics and Computing} % Your Degree
+\newcommand{\phone}{+86-12345678901} % Your Phone Number
+\newcommand{\email}{youremail@example.com} % Your Email
+% LINK
+\newcommand{\homepage}{https://githubusername.github.io/} % Homapage
+\newcommand{\googlescholar}{https://scholar.google.com/yourgooglescholar} % Google Scholar
+\newcommand{\semanticscholar}{https://www.semanticscholar.org/yoursemanticscholar} % Semantic Scholar
+\newcommand{\orcid}{https://orcid.org/yourorcid} % ORCID
+\newcommand{\dblp}{https://dblp.org/yourdblp} % DBLP
+\newcommand{\scopus}{https://www.scopus.com/yourscopus} % Scopus
+\newcommand{\github}{https://github.com/yourgithub} % GitHub
+% ID or USERNAME for DISPLAY
+\newcommand{\orcidid}{xxxx-xxxx-xxxx-xxxx} % ORCID ID
+\newcommand{\dblpid}{xxx/xxxx} % DBLP ID
+\newcommand{\scopusid}{xxxxxxxxxxx} % Scopus
+\newcommand{\githubusername}{githubusername} % GitHub
+
+
+\begin{document}
+\fontstyleiii
+
+% HEAD
+\input{sec/head}
+
+% BODY
+
+\cvsection{Personal Information}
+\input{sec/personal information}
+
+
+\cvsection{Education}
+\input{sec/education}
+
+\cvsection{Publications \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+\input{sec/publications}
+
+\cvsection{Honors and Awards}
+\input{sec/honors and awards}
+
+\cvsection{Projects}
+\input{sec/projects}
+
+\cvsection{Work Experience}
+\input{sec/work experience}
+
+\cvsection{School Experience}
+\input{sec/school experience}
+
+\cvsection{Academic Services}
+\input{sec/academic services}
+
+\vfill\hfill{\it\footnotesize Updated/Compiled on \today}
+\end{document}

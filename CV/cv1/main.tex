@@ -1,0 +1,174 @@
+%
+% CV LaTeX Template
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: tsunchuan@qq.com
+%
+%
+\documentclass[a4paper,11pt]{article}
+%
+% IMPORT PACKAGE
+\usepackage[T1]{fontenc}
+\usepackage{cfr-lm}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+%
+% PAGE LAYOUT
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{} % clear footer fields
+\fancyhead{} % clear header fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % addressing fancyhdr warning
+\setlength{\tabcolsep}{0in}
+\setlength{\arrayrulewidth}{0in}
+\newif\ifjustify
+\justifyfalse % justify, set \justifyfalse to left-align
+\ifjustify\else\raggedright\fi
+%
+% COLOR DEFINITIONS
+\usepackage{xcolor}
+\definecolor{darkblue}{RGB}{0,0,139}
+% HYPERLINK SETUP (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=darkblue,filecolor=darkblue,urlcolor=darkblue}
+%
+% SECTION FORMATTING
+\usepackage{titlesec}
+\titleformat{\section}{%
+  \bfseries\scshape\raggedright\large\vspace{-3pt}%
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+%
+% COMMANDS for ICON SIZING and POSITIONING
+\newcommand{\commandicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\mylocalicon}[1]{\raisebox{-0.18em}{\resizebox{!}{1.15em}{#1}}}
+%
+% CUSTOM COMMANDS
+% table column alignment, support auto-wrapping (X)
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+% redefine the itemize label
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+% define primary (maximum) and secondary (minimum) list environment
+\usepackage{enumitem}
+%\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0mm]}
+%\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4.4mm}}
+%\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0mm]}
+%\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1mm}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0mm,labelsep=2mm,itemsep=0mm,itemindent=0mm]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4.4mm}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0mm,labelsep=2mm,itemsep=0mm,itemindent=0mm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1mm}}
+% improve \item command: list item command for minimum list environment
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1}%
+%  \vspace{-0.5mm}%
+}
+% improve \item command: list item command for maximum list environment
+\newcommand{\resumeSubHeading}[4]{%
+  \item{\small%
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}%
+    \textbf{#1} & \textbf{\footnotesize{#2}} \\%
+    \textit{\footnotesize{#3}} & \textit{\footnotesize{#4}}%
+  \end{tabular*}}%
+  \vspace{-1.9mm}%
+}
+\newcommand{\resumeSubProject}[4]{%
+  \item{\small%
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}%
+    \textbf{#1} & \textbf{\footnotesize{#2}} \\%
+    \textit{\footnotesize{#3}} & \textbf{\footnotesize{#4}}% #4 just to show icon link
+  \end{tabular*}}%
+  \vspace{-1.9mm}%
+}
+\newcommand{\resumeSubContent}[2]{%
+  \item{\small%
+  \ifjustify%
+    \begin{tabularx}{\linewidth}[t]{X@{\hspace{2mm}}r}% X/L support auto-wrapping, X: default justify
+      {#1} & \textbf{\footnotesize{#2}}%
+    \end{tabularx}%
+  \else%
+    \begin{tabularx}{\linewidth}[t]{L@{\hspace{2mm}}r}% X/L support auto-wrapping, L: left-align
+      {#1} & \textbf{\footnotesize{#2}}%
+    \end{tabularx}%
+  \fi%
+}}
+%
+% FONT OPTIONS
+\newcommand{\fontstylei}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\fontstyleii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\fontstyleiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\fontstyleiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\fontstylev}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\fontstylevi}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\fontstylevii}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\fontstyleviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\fontstyleix}{\fontfamily{cmr}\selectfont} % Computer Modern Roman
+\newcommand{\fontstylex}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\fontstylexi}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+%
+% HEAD OPTIONS
+% there must be one and only one \headstyle set to true (e.g. \headstyleitrue)
+\newif\ifheadstylei\headstyleifalse % onecolumn, simple version & no icons, suitable for digital edition
+\newif\ifheadstyleii\headstyleiifalse % onecolumn, simple version & with icons, suitable for digital edition
+\newif\ifheadstyleiii\headstyleiiifalse % onecolumn, detailed version & no icons, suitable for print edition
+\newif\ifheadstyleiv\headstyleivfalse % onecolumn, detailed version & with icons, suitable for print edition
+\newif\ifheadstylev\headstylevfalse % twocolumn, no photo
+\newif\ifheadstylevi\headstylevifalse % twocolumn, with photo
+%
+% DEFINE PERSONAL INFORMATION
+\newcommand{\name}{Full NAME} % Your Name
+\newcommand{\location}{Your City, Your State - Your ZIP, Your Country} % Your Location
+\newcommand{\degree}{Ph.D of Mathematics and Computing} % Your Degree
+\newcommand{\phone}{+86-12345678901} % Your Phone Number
+\newcommand{\email}{youremail@example.com} % Your Email
+% LINK
+\newcommand{\homepage}{https://githubusername.github.io/} % Homapage
+\newcommand{\googlescholar}{https://scholar.google.com/yourgooglescholar} % Google Scholar
+\newcommand{\semanticscholar}{https://www.semanticscholar.org/yoursemanticscholar} % Semantic Scholar
+\newcommand{\orcid}{https://orcid.org/yourorcid} % ORCID
+\newcommand{\dblp}{https://dblp.org/yourdblp} % DBLP
+\newcommand{\scopus}{https://www.scopus.com/yourscopus} % Scopus
+\newcommand{\github}{https://github.com/yourgithub} % GitHub
+% ID or USERNAME for DISPLAY
+\newcommand{\orcidid}{xxxx-xxxx-xxxx-xxxx} % ORCID ID
+\newcommand{\dblpid}{xxx/xxxx} % DBLP ID
+\newcommand{\scopusid}{xxxxxxxxxxx} % Scopus
+\newcommand{\githubusername}{githubusername} % GitHub
+
+
+
+\begin{document}
+\fontstyleiii
+
+% HEAD
+\headstyleiitrue
+\input{sec/head}
+
+% BODY
+\input{sec/biography}
+
+\input{sec/education}
+
+\input{sec/publications}
+
+\input{sec/honors and awards}
+
+\input{sec/projects}
+
+\input{sec/work experience}
+
+\input{sec/school experience}
+
+\input{sec/academic services}
+
+\vfill\hfill{\it\footnotesize Updated/Compiled on \today}
+\end{document}
