@@ -172,7 +172,7 @@
 
 上面提到，第一层列表项命令封装的是一个 `tabular*` / `tabularx` 表格环境，因此为了实现表格左列文本的左边界与正文左边界对齐以及表格右列的右边界与正文右边界对齐，需要进行以下设置：
 
-（1）列表项文本左边距设置为0：在 `itemize` 列表环境中通过设置参数 `leftmargin=0mm` 可实现列表文本的左边界与正文左边界对齐。注意：`leftmargin=*` 只会让列表项的标签 label 的左边界与正文文本的左边界对齐；标签左侧到包裹它环境左边界（对于一级列表为左页边距）的距离为 `\leftmargin`$+$`\itemindent`$-$`\labelsep`$-$`\labelwidth`。
+（1）列表项文本左边距设置为0：在 `itemize` 列表环境中通过设置参数 `leftmargin=0mm` 可实现列表文本的左边界与正文左边界对齐。注意：`leftmargin=*` 只会让列表项的标签 label 的左边界与正文文本的左边界对齐；标签左侧到包裹它环境左边界（对于一级列表为左页边距）的距离为 `\leftmargin`+`\itemindent`-`\labelsep`-`\labelwidth`。
 
 ```latex
 \begin{itemize}[leftmargin=0mm,labelsep=2mm,itemsep=0mm,itemindent=0mm]

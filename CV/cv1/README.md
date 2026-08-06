@@ -208,7 +208,7 @@ For the commands `\resumeSubHeadingListEnd`, `\resumeItemListEnd`, `\resumeSubHe
 
 As mentioned above, the first-level list item commands wraps a `tabular*` / `tabularx` table environment, so to make the left edge of the table left column align with the left edge of the main text and the right edge of the table right column align with the right edge of the main text, you need to make the following settings:
 
-(1) **Set the left margin of list item text to 0**: In the `itemize` list environment, you can align the left edge of the **list item text** with the left edge of the main text by setting the parameter `leftmargin=0mm`. Note: `leftmargin=*` only aligns the left edge of the **list item label** with the left edge of the main text; the distance from the left side of the label to the left boundary of the enclosing environment (for a top-level list, this is the left page margin) is `\leftmargin`$+$`\itemindent`$-$`\labelsep`$-$`\labelwidth`.
+(1) **Set the left margin of list item text to 0**: In the `itemize` list environment, you can align the left edge of the **list item text** with the left edge of the main text by setting the parameter `leftmargin=0mm`. Note: `leftmargin=*` only aligns the left edge of the **list item label** with the left edge of the main text; the distance from the left side of the label to the left boundary of the enclosing environment (for a top-level list, this is the left page margin) is `\leftmargin`+`\itemindent`-`\labelsep`-`\labelwidth`.
 
 ```latex
 \begin{itemize}[leftmargin=0mm,labelsep=2mm,itemsep=0mm,itemindent=0mm]
