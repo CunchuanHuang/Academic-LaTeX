@@ -41,8 +41,8 @@ Headings can be located and titled strategically. Determine what is of primary i
 ## Preview
 
 <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-    <img src="figure/READMEpage1.png" style="width: 50%; height: auto;">
-    <img src="figure/READMEpage2.png" style="width: 50%; height: auto;">
+    <img src="figure/READMEpage1.png" style="width: 49%; height: auto;">
+    <img src="figure/READMEpage2.png" style="width: 49%; height: auto;">
 </div>
 
 ## Required Files
