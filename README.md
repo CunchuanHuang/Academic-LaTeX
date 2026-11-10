@@ -14,5 +14,6 @@ Committed to releasing an open-source academic LaTeX template.
 
 ## 📣News
 
-[2026/08/06] Released two [CV template](CV/).
+- [2026/11/10] Released a LaTeX [tutorial](Tut/).
+- [2026/08/06] Released two [CV templates](CV/).
 
