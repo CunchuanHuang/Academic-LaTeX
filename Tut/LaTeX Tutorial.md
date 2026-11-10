@@ -14,25 +14,25 @@
 
 # 前言
 
-**TeX 与 LaTeX：**（1）TeX（由 Donald E. Knuth 开发）是一个功能强大但语法底层的**排版引擎**，原始 TeX 语法非常底层难用，适合高级用户或极端定制需求。（2）LaTeX（由 Leslie Lamport 开发）是一种使用 TeX 程序作为排版引擎的**格式**，是建立在 TeX 上的**宏包系统**，本质上是用 TeX 写的一堆函数/命令。可以粗略地将 LaTeX 理解成是对 TeX 的一层封装，隐藏了 TeX 的复杂细节，简化了 TeX 的使用难度，旨在让用户专注于内容创作而非版式设计。（3）可以一句话理解为：TeX 是引擎，LaTeX 是封装，建立在 TeX 之上，是对 TeX 的宏命令封装，让排版变得更容易、更结构化。
+**TeX 与 LaTeX**：（1）TeX（由 Donald E. Knuth 开发）是一个功能强大但语法底层的**排版引擎**，原始 TeX 语法非常底层难用，适合高级用户或极端定制需求。（2）LaTeX（由 Leslie Lamport 开发）是一种使用 TeX 程序作为排版引擎的**格式**，是建立在 TeX 上的**宏包系统**，本质上是用 TeX 写的一堆函数/命令。可以粗略地将 LaTeX 理解成是对 TeX 的一层封装，隐藏了 TeX 的复杂细节，简化了 TeX 的使用难度，旨在让用户专注于内容创作而非版式设计。（3）可以一句话理解为：TeX 是引擎，LaTeX 是封装，建立在 TeX 之上，是对 TeX 的宏命令封装，让排版变得更容易、更结构化。
 
-**排版引擎：**程序/编译器，用于解释和执行源代码。（1）**TeX**：底层排版引擎，把 .tex 文件转成 .dvi 文件；（2）**pdfTeX** 与 pdfLaTeX：pdfTeX 是对原始 TeX 引擎的扩展，直接输出 PDF 文件，而不是 DVI；pdfLaTeX 基于 pdfTeX 引擎编译 .tex 文件中写的 LaTeX 语法，并直接输出 PDF 文件，这是目前最常用的 LaTeX **编译方式**，但不属于排版引擎；（3）**XeTeX** 与 XeLaTeX：XeTeX 支持 UTF-8 编码和对 TrueType/OpenType 字体的调用；当前较为方便的中文排版解决方案基于 XeLaTeX；（4）**LuaTeX** 与 LuaLaTeX：LuaTeX 在 pdfTeX 引擎基础上发展而来，除了支持 UTF-8 编码和对 TrueType/OpenType 字体的调用外，还支持通过 Lua 语言扩展 TeX 的功能；LuaLaTeX 编译命令下的中文排版支持需要借助 luatexja 宏包。
+**排版引擎**：程序/编译器，用于解释和执行源代码。（1）**TeX**：底层排版引擎，把 .tex 文件转成 .dvi 文件；（2）**pdfTeX** 与 pdfLaTeX：pdfTeX 是对原始 TeX 引擎的扩展，直接输出 PDF 文件，而不是 DVI；pdfLaTeX 基于 pdfTeX 引擎编译 .tex 文件中写的 LaTeX 语法，并直接输出 PDF 文件，这是目前最常用的 LaTeX **编译方式**，但不属于排版引擎；（3）**XeTeX** 与 XeLaTeX：XeTeX 支持 UTF-8 编码和对 TrueType/OpenType 字体的调用；当前较为方便的中文排版解决方案基于 XeLaTeX；（4）**LuaTeX** 与 LuaLaTeX：LuaTeX 在 pdfTeX 引擎基础上发展而来，除了支持 UTF-8 编码和对 TrueType/OpenType 字体的调用外，还支持通过 Lua 语言扩展 TeX 的功能；LuaLaTeX 编译命令下的中文排版支持需要借助 luatexja 宏包。
 
-**pdfTeX 与 XeTeX、LuaTeX：**当下 pdfTeX 有两个可原生使用 Unicode 输入与现代字体的替代引擎：XeTeX 和 LuaTeX。对于 LaTeX 版本而言，这些引擎通常在你的编辑器中分别通过 xelatex 和 lualatex 调用。
+**pdfTeX 与 XeTeX、LuaTeX**：当下 pdfTeX 有两个可原生使用 Unicode 输入与现代字体的替代引擎：XeTeX 和 LuaTeX。对于 LaTeX 版本而言，这些引擎通常在你的编辑器中分别通过 xelatex 和 lualatex 调用。
 
-**宏包系统：**宏包系统是一个由宏包集合、样式文件、文档类和文档组成的功能模块集合，通常为某类文档或排版任务提供统一风格和完整解决方案。其中，大多数宏包系统（如 AMS-LaTeX、CTeX）是构建在 LaTeX 上的，必须依赖 LaTeX 的命令结构，而少数（如 ConTeXt）是完全独立于 LaTeX 的排版系统。（1）**AMS-LaTeX**：包含 amsmath、amssymb、amsthm、amsfonts 等宏包，基于 LaTeX 实现（命令结构一致），用于数学论文排版；（2）**CTeX**：包含 ctex、xeCJK 等宏包，依赖 LaTeX，针对中文文档深度定制的 LaTeX 宏包系统；（3）**ConTeXt**：与 LaTeX 平行的独立排版系统，也是基于 TeX 开发的宏包系统。
+**宏包系统**：宏包系统是一个由宏包集合、样式文件、文档类和文档组成的功能模块集合，通常为某类文档或排版任务提供统一风格和完整解决方案。其中，大多数宏包系统（如 AMS-LaTeX、CTeX）是构建在 LaTeX 上的，必须依赖 LaTeX 的命令结构，而少数（如 ConTeXt）是完全独立于 LaTeX 的排版系统。（1）**AMS-LaTeX**：包含 amsmath、amssymb、amsthm、amsfonts 等宏包，基于 LaTeX 实现（命令结构一致），用于数学论文排版；（2）**CTeX**：包含 ctex、xeCJK 等宏包，依赖 LaTeX，针对中文文档深度定制的 LaTeX 宏包系统；（3）**ConTeXt**：与 LaTeX 平行的独立排版系统，也是基于 TeX 开发的宏包系统。
 
-**宏包与文档类：**宏包（package）与文档类（document class）均是宏包系统（package system）的构成单元。宏包的文件扩展为【\.sty】，使用语法【\\usepackage\{amsmath\}】；文档类的文件扩展为【\.cls】，使用语法【\\documentclass\{amsart\}】。
+**宏包与文档类**：宏包（package）与文档类（document class）均是宏包系统（package system）的构成单元。宏包的文件扩展为【\.sty】，使用语法【\\usepackage\{amsmath\}】；文档类的文件扩展为【\.cls】，使用语法【\\documentclass\{amsart\}】。
 
-**宏包系统 ≠ 宏包集合：**以 AMS-LaTeX 宏包系统为例，它不只是包含 amsmath\.sty 和 amssymb\.sty 宏包集合，它还包括 amsart\.cls 和 amsbook\.cls 这些文档类。
+**宏包系统 ≠ 宏包集合**：以 AMS-LaTeX 宏包系统为例，它不只是包含 amsmath\.sty 和 amssymb\.sty 宏包集合，它还包括 amsart\.cls 和 amsbook\.cls 这些文档类。
 
-**TeX 发行版（TeX distributions）：**LaTeX 本身不是一个独立的排版程序，而是一种建立在 TeX 排版系统之上的文档准备软件。TeX 发行版会打包所有构建一个完整 TeX 系统所需的各个部分（比如排版引擎和宏包系统等）。LaTeX 以及基于它构建的许多宏包（如 amsmath、graphicx、biblatex、ctex 等）已经成为所有主流 TeX 发行版（如 **TeX Live**、**MiKTeX**、**MacTeX** 等）的重要组成部分。
+**TeX 发行版（TeX distributions）**：LaTeX 本身不是一个独立的排版程序，而是一种建立在 TeX 排版系统之上的文档准备软件。TeX 发行版会打包所有构建一个完整 TeX 系统所需的各个部分（比如排版引擎和宏包系统等）。LaTeX 以及基于它构建的许多宏包（如 amsmath、graphicx、biblatex、ctex 等）已经成为所有主流 TeX 发行版（如 **TeX Live**、**MiKTeX**、**MacTeX** 等）的重要组成部分。
 
-**TeX 发行版？还是 LaTeX 发行版？**实际上只有 TeX 发行版，并不存在单独的 LaTeX 发行版。LaTex 本身只是一个 TeX 的宏包系统，必须依附 TeX 引擎运行；所有主流的 TeX 发行版（如 TeX Live、MiKTeX、MacTeX 等）都默认包含了 LaTex 宏包系统；但在实际使用 TeX 发行版中，通常是在使用 LaTeX，而不是直接使用 TeX。
+**TeX 发行版，还是 LaTeX 发行版**？实际上只有 TeX 发行版，并不存在单独的 LaTeX 发行版。LaTex 本身只是一个 TeX 的宏包系统，必须依附 TeX 引擎运行；所有主流的 TeX 发行版（如 TeX Live、MiKTeX、MacTeX 等）都默认包含了 LaTex 宏包系统；但在实际使用 TeX 发行版中，通常是在使用 LaTeX，而不是直接使用 TeX。
 
 使用 LaTeX 需要包含两个部分：（1）TeX 发行版；（2）**文本编辑器**：LaTeX 文档只是纯文本文件，因此可以使用任何文本编辑器进行编辑。但是，使用专为 LaTeX 设计的编辑器将带来更多便利，因为它们往往会提供一键编译、内置 PDF 阅读器以及语法高亮等功能，TeX Live 和 MiKTeX 均自带一个编辑器。
 
-**适用场景：**不是所见即所得（WYSIWYG, What You See Is What You Get），每次预览排版效果前都需要经过编译，适用于大篇幅排版的文档，比如学术论文写作、书籍著作等，平时的电子笔记使用Markdown、Word这些所见即所得的方式更合适。
+**适用场景**：不是所见即所得（WYSIWYG, What You See Is What You Get），每次预览排版效果前都需要经过编译，适用于大篇幅排版的文档，比如学术论文写作、书籍著作等，平时的电子笔记使用Markdown、Word这些所见即所得的方式更合适。
 
 # 安装
 
@@ -144,7 +144,7 @@ https://texstudio.sourceforge.net/
 
 必须以**空格**或**非字母字符**（标点、数字等）结束，后面不可以紧跟**字母**或**汉字**。否则会将紧跟的字母当成命令的一部分，后面紧跟汉字也会报错。
 
-**空格：**命令后的所有空格都会被忽略掉；若要强制引入空格需要在命令后：（1）使用花括号【\{\}】强制命令结束，空参数；（2）转义字符【\\】后的第一个空格不会被忽略；（3）使用【\~】添加一个不允许换行的空格，缺点就是在引入空格的同时不允许其后的内容在行尾需要换行显示。
+**空格**：命令后的所有空格都会被忽略掉；若要强制引入空格需要在命令后：（1）使用花括号【\{\}】强制命令结束，空参数；（2）转义字符【\\】后的第一个空格不会被忽略；（3）使用【\~】添加一个不允许换行的空格，缺点就是在引入空格的同时不允许其后的内容在行尾需要换行显示。
 
 ```latex
 \LaTeXxxx		% 报错
@@ -164,7 +164,7 @@ a \textbf{b} c			% a b c (ps: b 和 c 中间有空格效果)
 中 \textbf{文}~测试		% 中 文 测试
 ```
 
-**非字母字符：**不包括汉字。
+**非字母字符**：不包括汉字。
 
 ```latex
 \LaTeX, great!	% LaTeX, great!
@@ -236,7 +236,7 @@ LaTeX 源代码中会看到各种换行或者空格，但是在排版过程中�
 >
 > Reference：[《The TEXbook》](https://visualmatheditor.equatheque.net/doc/texbook.pdf)
 
-**工作原理：**源代码中用“行”的方式来表达，但是这些输入的行和最后出现在页面中的行本质上是不同的。因此，在编辑源代码时，作者可以随心所欲地换行，但要明确几个规则：
+**工作原理**：源代码中用“行”的方式来表达，但是这些输入的行和最后出现在页面中的行本质上是不同的。因此，在编辑源代码时，作者可以随心所欲地换行，但要明确几个规则：
 
 （1）一个**换行符**与一个空格等价；
 

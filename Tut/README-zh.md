@@ -10,8 +10,8 @@
 
 推荐书籍:
 
-[1] A short introduction to LaTeX2e. [[Website](https://ctan.org/tex-archive/info/lshort)] [[Pdf](./lshort.pdf)] [[Pdf-zh](./lshort-zh-cn.pdf)]
-[2] LaTeX2e: An unofficial reference manual. [[Website](https://tug.org/texinfohtml/latex2e.html)] [[Pdf](https://texdoc.org/serve/latex2e.pdf/0)]
-[3] The TEXbook. [[Pdf](https://web.math.ucsb.edu/~bigelow/books/texbook.pdf)]
+- [1] A short introduction to LaTeX2e. [[Website](https://ctan.org/tex-archive/info/lshort)] [[Pdf](./lshort.pdf)] [[Pdf-zh](./lshort-zh-cn.pdf)]
+- [2] LaTeX2e: An unofficial reference manual. [[Website](https://tug.org/texinfohtml/latex2e.html)] [[Pdf](https://texdoc.org/serve/latex2e.pdf/0)]
+- [3] The TEXbook. [[Pdf](https://web.math.ucsb.edu/~bigelow/books/texbook.pdf)]
 
 其中, [1] 提供了简明的上手教程, [2-3] 提供了关于 LaTeX 更底层的理解.
